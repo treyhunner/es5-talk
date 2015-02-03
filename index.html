@@ -225,8 +225,38 @@ console.log(totalSum); // 6
 				</section>
 
 				<section data-transition="fade">
+					<iframe src="polyfill-compat-table.html" width="1000px" height="500px"></iframe>
+					<footer class="align-right">
+						<small>ECMAScript 5 compatibility table from <a href="https://kangax.github.io/compat-table/es5/">kangax.github.io</a></small>
+					</footer>
+				</section>
+
+				<section data-transition="fade">
 					<h2>ES5 Shim</h2>
 					<p><a href="https://github.com/es-shims/es5-shim">es5-shim</a> is a collection of ECMAScript 5 compatibility shims for legacy JavaScript engines</p>
+				</section>
+
+				<section data-transition="fade">
+					<h2>What if I use Underscore.js?</h2>
+					<pre>
+					<code class="lang-js" data-trim contenteditable>
+// Underscore works on NodeList objects
+var nodeList = document.querySelectorAll('div');
+_.each(nodeList, function(div) { console.log(div.id); });
+
+// Underscore works on Node.js Buffer objects
+var buffer = fs.readFileSync('myfile.txt')
+var isASCII = _.every(buffer, function(c) { return (c <= 127); });
+
+					</code>
+					</pre>
+					<aside class="notes">
+						The new Array methods don't work on array-like objects that aren't actually arrays.
+
+						DOM node lists, File buffers, and other iterables don't support these new array methods.
+
+						Underscore.js is great for looping over collections besides arrays.
+					</aside>
 				</section>
 
 			</div>

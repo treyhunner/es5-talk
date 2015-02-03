@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ECMAScript 5 compatibility table</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
+
+    <link rel="stylesheet" href="compat-table.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="body">
+
+      <table id="table-wrapper">
+        <colgroup>
+          <col>
+          <col class="this-browser-col">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="test-name"></th>
+            <!-- TABLE HEADERS -->
+            <th class="platform ie7 desktop" data-browser="ie7"><a href="#ie7" class="browser-name"><abbr title="Internet Explorer 7">IE 7</abbr></a></th>
+            <th class="platform ie8 desktop" data-browser="ie8"><a href="#ie8" class="browser-name"><abbr title="Internet Explorer 8">IE 8</abbr></a></th>
+          <th class="platform ie7 desktop" data-browser="ie7"><a href="#ie7" class="browser-name"><abbr title="Internet Explorer 7">IE 7 Polyfilled</abbr></a></th><th class="platform ie8 desktop" data-browser="ie8"><a href="#ie8" class="browser-name"><abbr title="Internet Explorer 8">IE 8 Polyfilled</abbr></a></th></tr>
+        </thead>
+        <tbody>
+        <!-- TABLE BODY -->
+        <tr><td id="Array.prototype.indexOf"><span><a class="anchor" href="#Array.prototype.indexOf">§</a>Array.prototype.indexOf</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Array.prototype.lastIndexOf"><span><a class="anchor" href="#Array.prototype.lastIndexOf">§</a>Array.prototype.lastIndexOf</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Array.prototype.every"><span><a class="anchor" href="#Array.prototype.every">§</a>Array.prototype.every</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Array.prototype.some"><span><a class="anchor" href="#Array.prototype.some">§</a>Array.prototype.some</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Array.prototype.forEach"><span><a class="anchor" href="#Array.prototype.forEach">§</a>Array.prototype.forEach</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Array.prototype.map"><span><a class="anchor" href="#Array.prototype.map">§</a>Array.prototype.map</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Array.prototype.filter"><span><a class="anchor" href="#Array.prototype.filter">§</a>Array.prototype.filter</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Array.prototype.reduce"><span><a class="anchor" href="#Array.prototype.reduce">§</a>Array.prototype.reduce</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Array.prototype.reduceRight"><span><a class="anchor" href="#Array.prototype.reduceRight">§</a>Array.prototype.reduceRight</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><th colspan="35" class="separator"></th>
+        </tr>
+        <tr><td id="Object.create"><span><a class="anchor" href="#Object.create">§</a>Object.create</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes<a href="#true-note"><sup>[0]</sup></a></td><td class="yes" data-browser="ie8">Yes<a href="#true-note"><sup>[0]</sup></a></td></tr>
+        <tr><td id="Object.defineProperty"><span><a class="anchor" href="#Object.defineProperty">§</a>Object.defineProperty</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="yes" data-browser="ie8">Yes<a href="#define-property-ie-note"><sup>[1]</sup></a></td>
+        <td class="no" data-browser="ie7">No</td><td class="yes" data-browser="ie8">Yes<a href="#define-property-ie-note"><sup>[2]</sup></a></td></tr>
+        <tr><td id="Object.defineProperties"><span><a class="anchor" href="#Object.defineProperties">§</a>Object.defineProperties</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        <tr><td id="Object.getPrototypeOf"><span><a class="anchor" href="#Object.getPrototypeOf">§</a>Object.getPrototypeOf</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes<a href="#true-note"><sup>[0]</sup></a></td><td class="yes" data-browser="ie8">Yes<a href="#true-note"><sup>[0]</sup></a></td></tr>
+        <tr><td id="Object.keys"><span><a class="anchor" href="#Object.keys">§</a>Object.keys</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Object.seal"><span><a class="anchor" href="#Object.seal">§</a>Object.seal</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        <tr><td id="Object.freeze"><span><a class="anchor" href="#Object.freeze">§</a>Object.freeze</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        <tr><td id="Object.preventExtensions"><span><a class="anchor" href="#Object.preventExtensions">§</a>Object.preventExtensions</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        <tr><td id="Object.isSealed"><span><a class="anchor" href="#Object.isSealed">§</a>Object.isSealed</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes<a href="#true-note"><sup>[0]</sup></a></td><td class="yes" data-browser="ie8">Yes<a href="#true-note"><sup>[0]</sup></a></td></tr>
+        <tr><td id="Object.isFrozen"><span><a class="anchor" href="#Object.isFrozen">§</a>Object.isFrozen</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes<a href="#true-note"><sup>[0]</sup></a></td><td class="yes" data-browser="ie8">Yes<a href="#true-note"><sup>[0]</sup></a></td></tr>
+        <tr><td id="Object.isExtensible"><span><a class="anchor" href="#Object.isExtensible">§</a>Object.isExtensible</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes<a href="#true-note"><sup>[0]</sup></a></td><td class="yes" data-browser="ie8">Yes<a href="#true-note"><sup>[0]</sup></a></td></tr>
+        <tr><td id="Object.getOwnPropertyDescriptor"><span><a class="anchor" href="#Object.getOwnPropertyDescriptor">§</a>Object.getOwnPropertyDescriptor</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="yes" data-browser="ie8">Yes<a href="#get-own-property-descriptor-ie-note"><sup>[3]</sup></a></td>
+        <td class="no" data-browser="ie7">No</td><td class="yes" data-browser="ie8">Yes<a href="#get-own-property-descriptor-ie-note"><sup>[4]</sup></a></td></tr>
+        <tr><td id="Object.getOwnPropertyNames"><span><a class="anchor" href="#Object.getOwnPropertyNames">§</a>Object.getOwnPropertyNames</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes<a href="#true-note"><sup>[0]</sup></a></td><td class="yes" data-browser="ie8">Yes<a href="#true-note"><sup>[0]</sup></a></td></tr>
+        <tr><th colspan="35" class="separator"></th>
+        </tr>
+        <tr><td id="Date.prototype.toISOString"><span><a class="anchor" href="#Date.prototype.toISOString">§</a>Date.prototype.toISOString</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Date.now"><span><a class="anchor" href="#Date.now">§</a>Date.now</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Array.isArray"><span><a class="anchor" href="#Array.isArray">§</a>Array.isArray</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="JSON"><span><a class="anchor" href="#JSON">§</a>JSON</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="yes" data-browser="ie8">Yes</td>
+        <td class="no" data-browser="ie7">No</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Function.prototype.bind"><span><a class="anchor" href="#Function.prototype.bind">§</a>Function.prototype.bind</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="String.prototype.trim"><span><a class="anchor" href="#String.prototype.trim">§</a>String.prototype.trim</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><th colspan="35" class="separator"></th>
+        </tr>
+        <tr><td id="Getter_in_property_initializer"><span><a class="anchor" href="#Getter_in_property_initializer">§</a>Getter in property initializer</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        <tr><td id="Setter_in_property_initializer"><span><a class="anchor" href="#Setter_in_property_initializer">§</a>Setter in property initializer</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        <tr><th colspan="35" class="separator"></th>
+        </tr>
+        <tr><td id="Property_access_on_strings"><span><a class="anchor" href="#Property_access_on_strings">§</a>Property access on strings</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="yes" data-browser="ie8">Yes</td>
+        <td class="no" data-browser="ie7">No</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Reserved_words_as_property_names"><span><a class="anchor" href="#Reserved_words_as_property_names">§</a>Reserved words as property names</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        <tr><th colspan="35" class="separator"></th>
+        </tr>
+        <tr><td id="Zero-width_chars_in_identifiers"><span><a class="anchor" href="#Zero-width_chars_in_identifiers">§</a>Zero-width chars in identifiers</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        <tr><td id="parseInt()_ignores_leading_zeros"><span><a class="anchor" href="#parseInt()_ignores_leading_zeros">§</a>parseInt() ignores leading zeros</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="yes" data-browser="ie7">Yes</td><td class="yes" data-browser="ie8">Yes</td></tr>
+        <tr><td id="Immutable_undefined"><span><a class="anchor" href="#Immutable_undefined">§</a>Immutable undefined</span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        <tr><td id="Strict_mode"><span><a class="anchor" href="#Strict_mode">§</a><a href="../strict-mode/">Strict mode</a></span></td>
+          <td class="no" data-browser="ie7">No</td>
+          <td class="no" data-browser="ie8">No</td>
+        <td class="no" data-browser="ie7">No</td><td class="no" data-browser="ie8">No</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
