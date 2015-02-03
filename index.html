@@ -127,6 +127,34 @@ console.log(oddNumbers); // [1, 3]
 					</pre>
 				</section>
 
+				<section>
+					<h2><span class="no-transform">Array.prototype.every</span></h2>
+					<p>Returns true if <strong>all</strong> the values in the array pass the test implemented by the provided function</p>
+					<pre>
+					<code class="lang-js" data-trim contenteditable>
+var numbers = [1, 2, 3];
+var allAreOdd = numbers.every(function isOdd(number) {
+  return number % 2 == 1;
+});
+console.log(allAreOdd); // false
+					</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2><span class="no-transform">Array.prototype.some</span></h2>
+					<p>Returns true if <strong>any</strong> of the values in the array pass the test implemented by the provided function</p>
+					<pre>
+					<code class="lang-js" data-trim contenteditable>
+var numbers = [1, 2, 3];
+var anyAreOdd = numbers.some(function isOdd(number) {
+  return number % 2 == 1;
+});
+console.log(anyAreOdd); // true
+					</code>
+					</pre>
+				</section>
+
 			</div>
 
 		</div>
