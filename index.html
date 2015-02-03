@@ -55,7 +55,7 @@
 						&ldquo;ECMAScript is the scripting language standardized by Ecma International in the ECMA-262 specification and ISO/IEC 16262. The language is widely used for client-side scripting on the web, in the form of several well-known implementations such as JavaScript, JScript and ActionScript.&rdquo;
 						<footer>&mdash; <a href="https://en.wikipedia.org/w/index.php?title=ECMAScript&oldid=645298943">Wikipedia on ECMAScript</a></footer>
 					</blockquote>
-					<aside class="notes">
+					<aside class="notes" data-markdown>
 						Essentially, ECMAScript is a language specification and JavaScript is based on that specification.  JavaScript implementations can add features that have not been defined in ECMAScript.  JavaScript engines do tend to eventually support features from the current ECMAScript specifications.
 					</aside>
 				</section>
@@ -247,7 +247,7 @@ var isASCII = _.every(buffer, function(c) { return (c <= 127); });
 
 					</code>
 					</pre>
-					<aside class="notes">
+					<aside class="notes" data-markdown>
 						The new Array methods don't work on array-like objects that aren't actually arrays.
 
 						DOM node lists, File buffers, and other iterables don't support these new array methods.
@@ -264,7 +264,7 @@ var isASCII = _.every(buffer, function(c) { return (c <= 127); });
 						<li class="fragment">Future-proof</li>
 						<li class="fragment">Potentially more efficient</li>
 					</ul>
-					<aside class="notes">
+					<aside class="notes" data-markdown>
 						Whenever possible, I prefer to use the native array methods rather than the Underscore equivalents.
 
 						It's not unreasonable to assume other web developers probably know JavaScript.  It might be unreasonable to assume other developers are familiar with Underscore.
