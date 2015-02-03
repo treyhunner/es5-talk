@@ -179,6 +179,20 @@ console.log(anyAreOdd); // true
 					</pre>
 				</section>
 
+				<section>
+					<h2><span class="no-transform">reduce and reduceRight</span></h2>
+					<p>Reduces a list of values into a single value using an accumulator function (either left-to-right or right-to-left)</p>
+					<pre>
+					<code class="lang-js" data-trim contenteditable>
+var numbers = [1, 2, 3];
+var totalSum = numbers.reduce(function sum(previous, current) {
+  return previous + current;
+});
+console.log(totalSum); // 6
+					</code>
+					</pre>
+				</section>
+
 			</div>
 
 		</div>
