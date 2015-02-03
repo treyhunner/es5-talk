@@ -256,6 +256,27 @@ var isASCII = _.every(buffer, function(c) { return (c <= 127); });
 					</aside>
 				</section>
 
+				<section data-transition="fade">
+					<h2>Reasons to use native support</h2>
+					<ul>
+						<li class="fragment">More understandable</li>
+						<li class="fragment">More portable (vanilla JS is everywhere)</li>
+						<li class="fragment">Future-proof</li>
+						<li class="fragment">Potentially more efficient</li>
+					</ul>
+					<aside class="notes">
+						Whenever possible, I prefer to use the native array methods rather than the Underscore equivalents.
+
+						It's not unreasonable to assume other web developers probably know JavaScript.  It might be unreasonable to assume other developers are familiar with Underscore.
+
+						The native Array methods are also more portable.  Vanilla JS is built-in to every JavaScript engine, Underscore is not.
+
+						For that matter, who knows whether you'll want to use Underscore or a more functional-equivalent like Chris Stead's JFP.
+
+						Lastly, the native methods have the potential to be optimized for performance.  Speed isn't everything, but it doesn't hurt.
+					</aside>
+				</section>
+
 			</div>
 
 		</div>
