@@ -83,6 +83,50 @@
 					</ul>
 				</section>
 
+				<section>
+					<h2><span class="no-transform">Array.prototype.forEach</span></h2>
+					<p>Executes a provided function once for each array item</p>
+					<pre>
+					<code class="lang-js" data-trim contenteditable>
+var numbers = [1, 2, 3];
+numbers.forEach(function (number, index) {
+  console.log("Index " + index + " is " + number);
+});
+// Index 0 is 1
+// Index 1 is 2
+// Index 2 is 3
+					</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2><span class="no-transform">Array.prototype.map</span></h2>
+					<p>Returns a new array with the results of calling a provided function on each item of the array</p>
+					<pre>
+					<code class="lang-js" data-trim contenteditable>
+var numbers = [1, 2, 3];
+var squaredNumbers = numbers.map(function (number) {
+  return number * number;
+});
+console.log(squaredNumbers); // [1, 4, 9]
+					</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2><span class="no-transform">Array.prototype.filter</span></h2>
+					<p>Return a new array including only array items that pass the given test function.</p>
+					<pre>
+					<code class="lang-js" data-trim contenteditable>
+var numbers = [1, 2, 3];
+var oddNumbers = numbers.filter(function isOdd (number) {
+  return number % 2 == 1;
+});
+console.log(oddNumbers); // [1, 3]
+					</code>
+					</pre>
+				</section>
+
 			</div>
 
 		</div>
