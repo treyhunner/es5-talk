@@ -105,7 +105,7 @@ numbers.forEach(function (number, index) {
 					<pre>
 					<code class="lang-js" data-trim contenteditable>
 var numbers = [1, 2, 3];
-var squaredNumbers = numbers.map(function (number) {
+var squaredNumbers = numbers.map(function square(number) {
   return number * number;
 });
 console.log(squaredNumbers); // [1, 4, 9]
@@ -115,11 +115,11 @@ console.log(squaredNumbers); // [1, 4, 9]
 
 				<section>
 					<h2><span class="no-transform">Array.prototype.filter</span></h2>
-					<p>Return a new array including only array items that pass the given test function.</p>
+					<p>Returns a new array including only array items that pass the given test function.</p>
 					<pre>
 					<code class="lang-js" data-trim contenteditable>
 var numbers = [1, 2, 3];
-var oddNumbers = numbers.filter(function isOdd (number) {
+var oddNumbers = numbers.filter(function isOdd(number) {
   return number % 2 == 1;
 });
 console.log(oddNumbers); // [1, 3]
