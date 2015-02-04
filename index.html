@@ -1,134 +1,134 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>ECMAScript 5</title>
+    <title>ECMAScript 5</title>
 
-		<meta name="description" content="The future is now">
-		<meta name="author" content="Trey Hunner">
+    <meta name="description" content="The future is now">
+    <meta name="author" content="Trey Hunner">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-		<link rel="stylesheet" href="css/customizations.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/customizations.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<div class="slides">
+      <div class="slides">
 
-				<section data-transition="zoom">
+        <section data-transition="zoom">
           <h1><span class="no-transform">ECMAScript 5</span></h1>
-					<h3>The future is now (December 2009)</h3>
-					<p>
-						<small>Created by <a href="http://treyhunner.com">Trey Hunner</a> / <a href="http://twitter.com/treyhunner">@treyhunner</a></small>
-					</p>
-				</section>
+          <h3>The future is now (December 2009)</h3>
+          <p>
+            <small>Created by <a href="http://treyhunner.com">Trey Hunner</a> / <a href="http://twitter.com/treyhunner">@treyhunner</a></small>
+          </p>
+        </section>
 
-				<section data-transition="zoom">
-					<h2>What is <span class="no-transform">ECMAScript</span>?</h2>
-					<blockquote cite="https://en.wikipedia.org/w/index.php?title=ECMAScript&oldid=645298943">
-						&ldquo;ECMAScript is the scripting language standardized by Ecma International in the ECMA-262 specification and ISO/IEC 16262. The language is widely used for client-side scripting on the web, in the form of several well-known implementations such as JavaScript, JScript and ActionScript.&rdquo;
-						<footer>&mdash; <a href="https://en.wikipedia.org/w/index.php?title=ECMAScript&oldid=645298943">Wikipedia on ECMAScript</a></footer>
-					</blockquote>
-					<aside class="notes" data-markdown>
-						First, let's define ECMAScript
+        <section data-transition="zoom">
+          <h2>What is <span class="no-transform">ECMAScript</span>?</h2>
+          <blockquote cite="https://en.wikipedia.org/w/index.php?title=ECMAScript&oldid=645298943">
+            &ldquo;ECMAScript is the scripting language standardized by Ecma International in the ECMA-262 specification and ISO/IEC 16262. The language is widely used for client-side scripting on the web, in the form of several well-known implementations such as JavaScript, JScript and ActionScript.&rdquo;
+            <footer>&mdash; <a href="https://en.wikipedia.org/w/index.php?title=ECMAScript&oldid=645298943">Wikipedia on ECMAScript</a></footer>
+          </blockquote>
+          <aside class="notes" data-markdown>
+            First, let's define ECMAScript
 
-						- Essentially, ECMAScript is a language specification and JavaScript is based on that specification
-						- JavaScript implementations can add features that have not been defined in ECMAScript
-						- JavaScript engines do tend to eventually support features from the current ECMAScript specifications
-					</aside>
-				</section>
+            - Essentially, ECMAScript is a language specification and JavaScript is based on that specification
+            - JavaScript implementations can add features that have not been defined in ECMAScript
+            - JavaScript engines do tend to eventually support features from the current ECMAScript specifications
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<h2>So what about <span class="no-transform">ECMAScript</span> 5?</h2>
-					<ul>
-						<li><strong>Array goodies</strong>: forEach, indexOf, map, filter, &#8230;</li>
-						<li class="fragment fade-out" data-fragment-index="1"><strong>Object goodies</strong>: properties, sealing/freezing, &#8230;</li>
-						<li class="fragment fade-out" data-fragment-index="1">Function.prototype.bind</li>
-						<li class="fragment fade-out" data-fragment-index="1">String.prototype.trim</li>
-						<li class="fragment fade-out" data-fragment-index="1">Strict mode</li>
-						<li class="fragment fade-out" data-fragment-index="1">Native JSON support</li>
-						<li class="fragment fade-out" data-fragment-index="1">And more!</li>
-					</ul>
-					<aside class="notes" data-markdown>
-						So what's new in ECMAScript 5?
+        <section data-transition="fade">
+          <h2>So what about <span class="no-transform">ECMAScript</span> 5?</h2>
+          <ul>
+            <li><strong>Array goodies</strong>: forEach, indexOf, map, filter, &#8230;</li>
+            <li class="fragment fade-out" data-fragment-index="1"><strong>Object goodies</strong>: properties, sealing/freezing, &#8230;</li>
+            <li class="fragment fade-out" data-fragment-index="1">Function.prototype.bind</li>
+            <li class="fragment fade-out" data-fragment-index="1">String.prototype.trim</li>
+            <li class="fragment fade-out" data-fragment-index="1">Strict mode</li>
+            <li class="fragment fade-out" data-fragment-index="1">Native JSON support</li>
+            <li class="fragment fade-out" data-fragment-index="1">And more!</li>
+          </ul>
+          <aside class="notes" data-markdown>
+            So what's new in ECMAScript 5?
 
-						Among other things:
+            Among other things:
 
-						- new array methods
-						- new object methods
-						- function binding was added
-						- strict mode was added
-						- a native JSON parser was included
+            - new array methods
+            - new object methods
+            - function binding was added
+            - strict mode was added
+            - a native JSON parser was included
 
-						In this presentation I'll focus just on the new array methods
-					</aside>
-				</section>
+            In this presentation I'll focus just on the new array methods
+          </aside>
+        </section>
 
-				<section>
-					<h2><span class="no-transform">indexOf</span></h2>
-					<p>Return first index at which a value can be found in the array</p>
-					<pre>
-					<code class="lang-js" data-trim contenteditable>
+        <section>
+          <h2><span class="no-transform">indexOf</span></h2>
+          <p>Return first index at which a value can be found in the array</p>
+          <pre>
+          <code class="lang-js" data-trim contenteditable>
 var colors = ['red', 'green', 'red', 'blue'];
 var indexOfRed = colors.indexOf('red');
 console.log(indexOfRed); // 0
-					</code>
-					</pre>
-					<aside class="notes" data-markdown>
-						Strings have an `indexOf` method, now arrays do too!
+          </code>
+          </pre>
+          <aside class="notes" data-markdown>
+            Strings have an `indexOf` method, now arrays do too!
 
-						As you might expect, `indexOf` returns the first array index something appears at.
-					</aside>
-				</section>
+            As you might expect, `indexOf` returns the first array index something appears at.
+          </aside>
+        </section>
 
-				<section>
-					<h2><span class="no-transform">lastIndexOf</span></h2>
-					<p>Return last index at which a value can be found in the array</p>
-					<pre>
-					<code class="lang-js" data-trim contenteditable>
+        <section>
+          <h2><span class="no-transform">lastIndexOf</span></h2>
+          <p>Return last index at which a value can be found in the array</p>
+          <pre>
+          <code class="lang-js" data-trim contenteditable>
 var colors = ['red', 'green', 'red', 'blue'];
 var indexOfRed = colors.lastIndexOf('red');
 console.log(indexOfRed); // 2
-					</code>
-					</pre>
-					<aside class="notes" data-markdown>
-						Just like strings, arrays also have a `lastIndexOf` now.
+          </code>
+          </pre>
+          <aside class="notes" data-markdown>
+            Just like strings, arrays also have a `lastIndexOf` now.
 
-						This returns the *last* array index something appears at.
-					</aside>
-				</section>
+            This returns the *last* array index something appears at.
+          </aside>
+        </section>
 
-				<section>
-					<h2><span class="no-transform">forEach</span></h2>
-					<p>Executes a provided function once for each array item</p>
-					<pre>
-					<code class="lang-js" data-trim contenteditable>
+        <section>
+          <h2><span class="no-transform">forEach</span></h2>
+          <p>Executes a provided function once for each array item</p>
+          <pre>
+          <code class="lang-js" data-trim contenteditable>
 var numbers = [1, 2, 3];
 numbers.forEach(function (number, index) {
   console.log("Index " + index + " is " + number);
@@ -136,203 +136,203 @@ numbers.forEach(function (number, index) {
 // Index 0 is 1
 // Index 1 is 2
 // Index 2 is 3
-					</code>
-					</pre>
-					<aside class="notes" data-markdown>
-						Instead of writing awkward `for` loops from 0 to the array length and worrying about fetching items based on their array index, we can just use `forEach` to loop over each item in an array.
-					</aside>
-				</section>
+          </code>
+          </pre>
+          <aside class="notes" data-markdown>
+            Instead of writing awkward `for` loops from 0 to the array length and worrying about fetching items based on their array index, we can just use `forEach` to loop over each item in an array.
+          </aside>
+        </section>
 
-				<section>
-					<h2><span class="no-transform">map</span></h2>
-					<p>Return new array with the results of calling a provided function on each item of the array</p>
-					<pre>
-					<code class="lang-js" data-trim contenteditable>
+        <section>
+          <h2><span class="no-transform">map</span></h2>
+          <p>Return new array with the results of calling a provided function on each item of the array</p>
+          <pre>
+          <code class="lang-js" data-trim contenteditable>
 var numbers = [1, 2, 3];
 var squaredNumbers = numbers.map(function square(n) {
   return n * n;
 });
 console.log(squaredNumbers); // [1, 4, 9]
-					</code>
-					</pre>
-					<aside class="notes" data-markdown>
-						Anyone familiar with functional programming is probably fond of `map`.
+          </code>
+          </pre>
+          <aside class="notes" data-markdown>
+            Anyone familiar with functional programming is probably fond of `map`.
 
-						`map` creates a new array by calling a transformation function on each item from the old array.
-					</aside>
-				</section>
+            `map` creates a new array by calling a transformation function on each item from the old array.
+          </aside>
+        </section>
 
-				<section>
-					<h2><span class="no-transform">filter</span></h2>
-					<p>Return new array including only array items that pass the given test function.</p>
-					<pre>
-					<code class="lang-js" data-trim contenteditable>
+        <section>
+          <h2><span class="no-transform">filter</span></h2>
+          <p>Return new array including only array items that pass the given test function.</p>
+          <pre>
+          <code class="lang-js" data-trim contenteditable>
 var numbers = [1, 2, 3];
 var oddNumbers = numbers.filter(function isOdd(number) {
   return number % 2 == 1;
 });
 console.log(oddNumbers); // [1, 3]
-					</code>
-					</pre>
-					<aside class="notes" data-markdown>
-						`filter` accepts a predicate function and creates a new array containing only items from the old array that pass the predicate test.
+          </code>
+          </pre>
+          <aside class="notes" data-markdown>
+            `filter` accepts a predicate function and creates a new array containing only items from the old array that pass the predicate test.
 
-						Passing the predicate test just means the predicate function returns `true` for the given item.
-					</aside>
-				</section>
+            Passing the predicate test just means the predicate function returns `true` for the given item.
+          </aside>
+        </section>
 
-				<section>
-					<h2><span class="no-transform">every</span></h2>
-					<p>Return true if <strong>all</strong> the values in the array pass the test implemented by the provided function</p>
-					<pre>
-					<code class="lang-js" data-trim contenteditable>
+        <section>
+          <h2><span class="no-transform">every</span></h2>
+          <p>Return true if <strong>all</strong> the values in the array pass the test implemented by the provided function</p>
+          <pre>
+          <code class="lang-js" data-trim contenteditable>
 var numbers = [1, 2, 3];
 var allAreOdd = numbers.every(function isOdd(number) {
   return number % 2 == 1;
 });
 console.log(allAreOdd); // false
-					</code>
-					</pre>
-					<aside class="notes" data-markdown>
-						`every` returns `true` if *every* array item passes a given predicate test
-					</aside>
-				</section>
+          </code>
+          </pre>
+          <aside class="notes" data-markdown>
+            `every` returns `true` if *every* array item passes a given predicate test
+          </aside>
+        </section>
 
-				<section>
-					<h2><span class="no-transform">some</span></h2>
-					<p>Return true if <strong>any</strong> of the values in the array pass the test implemented by the provided function</p>
-					<pre>
-					<code class="lang-js" data-trim contenteditable>
+        <section>
+          <h2><span class="no-transform">some</span></h2>
+          <p>Return true if <strong>any</strong> of the values in the array pass the test implemented by the provided function</p>
+          <pre>
+          <code class="lang-js" data-trim contenteditable>
 var numbers = [1, 2, 3];
 var anyAreOdd = numbers.some(function isOdd(number) {
   return number % 2 == 1;
 });
 console.log(anyAreOdd); // true
-					</code>
-					</pre>
-					<aside class="notes" data-markdown>
-						In contrast, `some` returns `true` whenever *some* of the array items pass a given predicate test.
+          </code>
+          </pre>
+          <aside class="notes" data-markdown>
+            In contrast, `some` returns `true` whenever *some* of the array items pass a given predicate test.
 
-						That means it'll return `true` if one or more items pass the test.
-					</aside>
-				</section>
+            That means it'll return `true` if one or more items pass the test.
+          </aside>
+        </section>
 
-				<section>
-					<h2><span class="no-transform">reduce and reduceRight</span></h2>
-					<p>Reduces a list of values into a single value using an accumulator function (either left-to-right or right-to-left)</p>
-					<pre>
-					<code class="lang-js" data-trim contenteditable>
+        <section>
+          <h2><span class="no-transform">reduce and reduceRight</span></h2>
+          <p>Reduces a list of values into a single value using an accumulator function (either left-to-right or right-to-left)</p>
+          <pre>
+          <code class="lang-js" data-trim contenteditable>
 var numbers = [1, 2, 3];
 var totalSum = numbers.reduce(function sum(previous, current) {
   return previous + current;
 });
 console.log(totalSum); // 6
-					</code>
-					</pre>
-					<aside class="notes" data-markdown>
-						The `reduce` and `reduceRight` functions reduces an array into a single value based on an accumulator function.
+          </code>
+          </pre>
+          <aside class="notes" data-markdown>
+            The `reduce` and `reduceRight` functions reduces an array into a single value based on an accumulator function.
 
-						The accumulator function accepts arguments for the previous and current array items and it's return value will be passed in as the previous value for the next `reduce` call.
-					</aside>
-				</section>
+            The accumulator function accepts arguments for the previous and current array items and it's return value will be passed in as the previous value for the next `reduce` call.
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<h2>How's the browser support?</h2>
-					<ul>
-						<li>Specification finalized in December 2009</li>
-						<li>Fully-supported in all modern browsers</li>
-						<li class="fragment">Nearly full support in Internet Explorer 9+</li>
-						<li class="fragment">No support in Internet Explorer 8</li>
-					</ul>
-					<aside class="notes" data-markdown>
-						These new array methods are great, but can you actually use them yet?
+        <section data-transition="fade">
+          <h2>How's the browser support?</h2>
+          <ul>
+            <li>Specification finalized in December 2009</li>
+            <li>Fully-supported in all modern browsers</li>
+            <li class="fragment">Nearly full support in Internet Explorer 9+</li>
+            <li class="fragment">No support in Internet Explorer 8</li>
+          </ul>
+          <aside class="notes" data-markdown>
+            These new array methods are great, but can you actually use them yet?
 
-						ECMAScript 5 spec was finalized about 5 years ago and by now it's fully supported in all modern browsers.
+            ECMAScript 5 spec was finalized about 5 years ago and by now it's fully supported in all modern browsers.
 
-						But what about Internet Explorer?
+            But what about Internet Explorer?
 
-						Good news!  IE9 supports ECMAScript 5 almost completely and IE10 includes full support.
+            Good news!  IE9 supports ECMAScript 5 almost completely and IE10 includes full support.
 
-						Unfortunately, IE8 doesn't support ECMAScript 5 at all.
-					</aside>
-				</section>
+            Unfortunately, IE8 doesn't support ECMAScript 5 at all.
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<iframe src="compat-table.html" width="1000px" height="500px"></iframe>
-					<footer class="align-right">
-						<small>ECMAScript 5 compatibility table from <a href="https://kangax.github.io/compat-table/es5/">kangax.github.io</a></small>
-					</footer>
-					<aside class="notes" data-markdown>
-						As you can see from this chart, IE8 support for ES5 is pretty bleak.
+        <section data-transition="fade">
+          <iframe src="compat-table.html" width="1000px" height="500px"></iframe>
+          <footer class="align-right">
+            <small>ECMAScript 5 compatibility table from <a href="https://kangax.github.io/compat-table/es5/">kangax.github.io</a></small>
+          </footer>
+          <aside class="notes" data-markdown>
+            As you can see from this chart, IE8 support for ES5 is pretty bleak.
 
-						But we shouldn't let that stop us.  Most of these features can be monkey-patched in using a polyfill.  And I just said the magic word which means it's time for more definitions.
-					</aside>
-				</section>
+            But we shouldn't let that stop us.  Most of these features can be monkey-patched in using a polyfill.  And I just said the magic word which means it's time for more definitions.
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<h2>Polyfill</h2>
-					<blockquote cite="https://remysharp.com/2010/10/08/what-is-a-polyfill">
-						&ldquo;A polyfill, or polyfiller, is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively.&rdquo;
-						<footer>&mdash; <a href="https://remysharp.com/2010/10/08/what-is-a-polyfill">Remy Sharp</a></footer>
-					</blockquote>
-					<aside class="notes" data-markdown>
-						Time for more definitions.
+        <section data-transition="fade">
+          <h2>Polyfill</h2>
+          <blockquote cite="https://remysharp.com/2010/10/08/what-is-a-polyfill">
+            &ldquo;A polyfill, or polyfiller, is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively.&rdquo;
+            <footer>&mdash; <a href="https://remysharp.com/2010/10/08/what-is-a-polyfill">Remy Sharp</a></footer>
+          </blockquote>
+          <aside class="notes" data-markdown>
+            Time for more definitions.
 
-						Remy Sharp coined the term "polyfill" in 2009 to describe a method by which particular features are monkey-patched into a JS engine when native support is missing.
-					</aside>
-				</section>
+            Remy Sharp coined the term "polyfill" in 2009 to describe a method by which particular features are monkey-patched into a JS engine when native support is missing.
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<h2>Shim</h2>
-					<blockquote cite="https://en.wikipedia.org/w/index.php?title=Shim_(computing)&oldid=628574738">
-						&ldquo;In computer programming, a shim is a small library that transparently intercepts API calls and changes the arguments passed, handles the operation itself, or redirects the operation elsewhere.&rdquo;
-						<footer>&mdash; <a href="https://en.wikipedia.org/w/index.php?title=Shim_(computing)&oldid=628574738">Wikipedia on Shims</a></footer>
-					</blockquote>
-					<aside class="notes" data-markdown>
-						Let's do another definition.
+        <section data-transition="fade">
+          <h2>Shim</h2>
+          <blockquote cite="https://en.wikipedia.org/w/index.php?title=Shim_(computing)&oldid=628574738">
+            &ldquo;In computer programming, a shim is a small library that transparently intercepts API calls and changes the arguments passed, handles the operation itself, or redirects the operation elsewhere.&rdquo;
+            <footer>&mdash; <a href="https://en.wikipedia.org/w/index.php?title=Shim_(computing)&oldid=628574738">Wikipedia on Shims</a></footer>
+          </blockquote>
+          <aside class="notes" data-markdown>
+            Let's do another definition.
 
-						The term shim, as it applies to programming, actually predates the web.  Shims are basically just thin compatibility layers that allow one API to be supported on top of another.
+            The term shim, as it applies to programming, actually predates the web.  Shims are basically just thin compatibility layers that allow one API to be supported on top of another.
 
-						Now that we have shim defined, we can think of polyfills with an even simpler definition.
-					</aside>
-				</section>
+            Now that we have shim defined, we can think of polyfills with an even simpler definition.
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<h2>Polyfill</h2>
-					<blockquote cite="http://www.paulirish.com/i/7570.png">
-						&ldquo;A shim that mimics a future API, providing fallback functionality to older browsers.&rdquo;
-						<footer>&mdash; <a href="http://www.paulirish.com/i/7570.png">Paul Irish</a></footer>
-					</blockquote>
-					<aside class="notes" data-markdown>
-						A polyfill is just a shim that allows legacy browsers to support a more modern API, even when they lack native support.
+        <section data-transition="fade">
+          <h2>Polyfill</h2>
+          <blockquote cite="http://www.paulirish.com/i/7570.png">
+            &ldquo;A shim that mimics a future API, providing fallback functionality to older browsers.&rdquo;
+            <footer>&mdash; <a href="http://www.paulirish.com/i/7570.png">Paul Irish</a></footer>
+          </blockquote>
+          <aside class="notes" data-markdown>
+            A polyfill is just a shim that allows legacy browsers to support a more modern API, even when they lack native support.
 
-						With good polyfills, we can make old browsers work with code that would otherwise only run on new browsers.
-					</aside>
-				</section>
+            With good polyfills, we can make old browsers work with code that would otherwise only run on new browsers.
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<h2>ES5 Shim</h2>
-					<p><a href="https://github.com/es-shims/es5-shim">es5-shim</a> is a collection of ECMAScript 5 compatibility shims for legacy JavaScript engines</p>
-					<aside class="notes" data-markdown>
-						With those definitions out of the way, let's talk about how to make that browser compatibility table look more green.
+        <section data-transition="fade">
+          <h2>ES5 Shim</h2>
+          <p><a href="https://github.com/es-shims/es5-shim">es5-shim</a> is a collection of ECMAScript 5 compatibility shims for legacy JavaScript engines</p>
+          <aside class="notes" data-markdown>
+            With those definitions out of the way, let's talk about how to make that browser compatibility table look more green.
 
-						ES5 Shim is a polyfill that allows older browsers to support a number of ECMAScript 5 features.
-					</aside>
-				</section>
+            ES5 Shim is a polyfill that allows older browsers to support a number of ECMAScript 5 features.
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<iframe src="polyfill-compat-table.html" width="1000px" height="500px"></iframe>
-					<aside class="notes" data-markdown>
-						With ES5 Shim, all of the array methods we just discussed can be safely used in all browsers.
+        <section data-transition="fade">
+          <iframe src="polyfill-compat-table.html" width="1000px" height="500px"></iframe>
+          <aside class="notes" data-markdown>
+            With ES5 Shim, all of the array methods we just discussed can be safely used in all browsers.
 
-						Excellent.
-					</aside>
-				</section>
+            Excellent.
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<h2>What if I use Underscore.js?</h2>
-					<pre>
-					<code class="lang-js" data-trim contenteditable>
+        <section data-transition="fade">
+          <h2>What if I use Underscore.js?</h2>
+          <pre>
+          <code class="lang-js" data-trim contenteditable>
 // Underscore works on NodeList objects
 var nodeList = document.querySelectorAll('div');
 _.each(nodeList, function(div) { console.log(div.id); });
@@ -341,75 +341,75 @@ _.each(nodeList, function(div) { console.log(div.id); });
 var buffer = fs.readFileSync('myfile.txt')
 var isASCII = _.every(buffer, function(c) { return (c <= 127); });
 
-					</code>
-					</pre>
-					<aside class="notes" data-markdown>
-						The new Array methods don't work on array-like objects that aren't actually arrays.
+          </code>
+          </pre>
+          <aside class="notes" data-markdown>
+            The new Array methods don't work on array-like objects that aren't actually arrays.
 
-						DOM node lists, File buffers, and other iterables don't support these new array methods.
+            DOM node lists, File buffers, and other iterables don't support these new array methods.
 
-						Underscore.js is great for looping over collections besides arrays.
-					</aside>
-				</section>
+            Underscore.js is great for looping over collections besides arrays.
+          </aside>
+        </section>
 
-				<section data-transition="fade">
-					<h2>Reasons to use native support</h2>
-					<ul>
-						<li class="fragment">More understandable</li>
-						<li class="fragment">More portable (vanilla JS is everywhere)</li>
-						<li class="fragment">Future-proof</li>
-						<li class="fragment">Potentially more efficient</li>
-					</ul>
-					<aside class="notes" data-markdown>
-						Whenever possible, I prefer to use the native array methods rather than the Underscore equivalents.
+        <section data-transition="fade">
+          <h2>Reasons to use native support</h2>
+          <ul>
+            <li class="fragment">More understandable</li>
+            <li class="fragment">More portable (vanilla JS is everywhere)</li>
+            <li class="fragment">Future-proof</li>
+            <li class="fragment">Potentially more efficient</li>
+          </ul>
+          <aside class="notes" data-markdown>
+            Whenever possible, I prefer to use the native array methods rather than the Underscore equivalents.
 
-						It's not unreasonable to assume other web developers probably know JavaScript.  It might be unreasonable to assume other developers are familiar with Underscore.
+            It's not unreasonable to assume other web developers probably know JavaScript.  It might be unreasonable to assume other developers are familiar with Underscore.
 
-						The native Array methods are also more portable.  Vanilla JS is built-in to every JavaScript engine, Underscore is not.
+            The native Array methods are also more portable.  Vanilla JS is built-in to every JavaScript engine, Underscore is not.
 
-						For that matter, who knows whether you'll want to use Underscore or a more functional-equivalent like Chris Stead's JFP.
+            For that matter, who knows whether you'll want to use Underscore or a more functional-equivalent like Chris Stead's JFP.
 
-						Lastly, the native methods have the potential to be optimized for performance.  Speed isn't everything, but it doesn't hurt.
-					</aside>
-				</section>
+            Lastly, the native methods have the potential to be optimized for performance.  Speed isn't everything, but it doesn't hurt.
+          </aside>
+        </section>
 
-				<section data-transition="zoom">
-					<h1>End</h1>
-					<h3><a href="http://treyhunner.com">treyhunner.com</a></h3>
-					<h3><a href="http://twitter.com/treyhunner">@treyhunner</a></h3>
-				</section>
+        <section data-transition="zoom">
+          <h1>End</h1>
+          <h3><a href="http://treyhunner.com">treyhunner.com</a></h3>
+          <h3><a href="http://twitter.com/treyhunner">@treyhunner</a></h3>
+        </section>
 
-			</div>
+      </div>
 
-		</div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
+    <script>
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
 
-		</script>
+    </script>
 
-	</body>
+  </body>
 </html>
